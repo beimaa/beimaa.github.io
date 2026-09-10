@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冲浪纸飞机折法图解 - 滑翔纸飞机折法步骤与飞行调整指南</title>
+<meta name="description" content="冲浪纸飞机折法图解，用分步图解讲清冲浪纸飞机的折法步骤、纸张选择、机翼与升降舵调整方法，并说明它为什么能长时间滑翔以及常见问题的排查思路。">
+<meta name="keywords" content="冲浪纸飞机折法图解,冲浪纸飞机,滑翔纸飞机,纸飞机折法,纸飞机教程">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --sky-deep:#0b3d66;
+  --sky-mid:#1b6ea8;
+  --sky-light:#e8f4fb;
+  --wave:#2fa8d8;
+  --sand:#f7f3ea;
+  --ink:#1c2733;
+  --ink-soft:#4a5b6b;
+  --line:#d3e3ee;
+  --accent:#ff8a3d;
+  --radius:14px;
+  --shadow:0 8px 24px rgba(11,61,102,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--sand);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block;}
+a{color:var(--sky-mid);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{width:min(1140px,92%);margin:0 auto;}
+
+/* ---------- 顶部 ---------- */
+header.site-head{
+  background:linear-gradient(160deg,var(--sky-deep) 0%,var(--sky-mid) 62%,var(--wave) 100%);
+  color:#fff;
+  padding-bottom:56px;
+  position:relative;
+  overflow:hidden;
+}
+header.site-head::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-2px;height:70px;
+  background:radial-gradient(120% 100% at 50% 100%,rgba(255,255,255,.16) 0%,transparent 70%);
+  pointer-events:none;
+}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;gap:16px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:.5px;}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.35);
+  display:grid;place-items:center;font-size:18px;
+}
+nav.main-nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap;}
+nav.main-nav a{
+  color:#eaf6ff;font-size:.94rem;padding:7px 13px;border-radius:999px;
+  transition:.2s;text-decoration:none;
+}
+nav.main-nav a:hover{background:rgba(255,255,255,.16);text-decoration:none;}
+
+.hero{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:44px;align-items:center;padding-top:34px;
+}
+.hero h1{
+  font-size:clamp(1.7rem,3.6vw,2.5rem);
+  line-height:1.35;letter-spacing:.5px;margin-bottom:16px;
+}
+.hero h1 em{font-style:normal;color:#ffd9a8;}
+.hero p.lead{
+  font-size:1.02rem;color:#dff0fb;max-width:52ch;margin-bottom:24px;
+}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;}
+.hero-tags span{
+  font-size:.82rem;padding:5px 12px;border-radius:999px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+}
+.hero-card{
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.30);
+  border-radius:var(--radius);
+  padding:22px 22px 18px;
+  backdrop-filter:blur(3px);
+}
+.hero-card h2{font-size:1rem;margin-bottom:12px;color:#fff;letter-spacing:.5px;}
+.hero-card ol{margin-left:18px;font-size:.93rem;color:#e6f4fd;}
+.hero-card ol li{margin-bottom:6px;}
+
+/* ---------- 通用区块 ---------- */
+section{padding:56px 0;}
+.sec-head{margin-bottom:28px;max-width:70ch;}
+.sec-head .kicker{
+  display:inline-block;font-size:.78rem;letter-spacing:2px;
+  color:var(--wave);font-weight:700;margin-bottom:8px;
+}
+.sec-head h2{
+  font-size:clamp(1.3rem,2.4vw,1.7rem);
+  line-height:1.4;color:var(--sky-deep);
+}
+.sec-head p{margin-top:10px;color:var(--ink-soft);font-size:.96rem;}
+
+/* ---------- 折法步骤 ---------- */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);position:relative;
+}
+.step .num{
+  position:absolute;top:-14px;left:20px;
+  width:34px;height:34px;border-radius:10px;
+  background:var(--sky-mid);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:.95rem;
+  box-shadow:0 6px 14px rgba(27,110,168,.35);
+}
+.step h3{font-size:1.05rem;margin:12px 0 8px;color:var(--sky-deep);}
+.step p{font-size:.94rem;color:var(--ink-soft);}
+.step p + p{margin-top:8px;}
+.step .tip{
+  margin-top:12px;font-size:.88rem;color:#8a4a12;
+  background:#fff5ea;border-left:3px solid var(--accent);
+  padding:8px 12px;border-radius:0 8px 8px 0;
+}
+
+/* ---------- 图解示意 ---------- */
+.diagram-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.diagram{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;text-align:center;box-shadow:var(--shadow);
+}
+.diagram svg{width:100%;height:110px;display:block;margin-bottom:10px;}
+.diagram strong{display:block;font-size:.92rem;color:var(--sky-deep);}
+.diagram span{font-size:.82rem;color:var(--ink-soft);}
+
+/* ---------- 参数表 ---------- */
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);}
+table{width:100%;border-collapse:collapse;min-width:560px;font-size:.93rem;}
+caption{caption-side:top;text-align:left;padding:16px 18px 0;font-weight:700;color:var(--sky-deep);}
+th,td{padding:12px 18px;text-align:left;border-bottom:1px solid var(--line);}
+th{background:var(--sky-light);color:var(--sky-deep);font-weight:600;white-space:nowrap;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f6fbfe;}
+
+/* ---------- 滑翔原理 ---------- */
+.principle{
+  background:linear-gradient(180deg,#fff 0%,var(--sky-light) 100%);
+  border-radius:var(--radius);border:1px solid var(--line);
+  padding:30px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;
+}
+.principle h3{color:var(--sky-deep);font-size:1.15rem;margin-bottom:12px;}
+.principle p{font-size:.95rem;color:var(--ink-soft);}
+.principle ul{margin:14px 0 0 18px;font-size:.94rem;color:var(--ink-soft);}
+.principle ul li{margin-bottom:7px;}
+.force-box{background:#fff;border-radius:12px;padding:20px;border:1px dashed var(--wave);}
+.force-box dl{font-size:.9rem;}
+.force-box dt{font-weight:700;color:var(--sky-mid);margin-top:10px;}
+.force-box dt:first-child{margin-top:0;}
+.force-box dd{color:var(--ink-soft);}
+
+/* ---------- 问题排查 ---------- */
+.trouble{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.trouble article{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;box-shadow:var(--shadow);
+}
+.trouble h3{font-size:.98rem;color:var(--sky-deep);margin-bottom:10px;}
+.trouble p{font-size:.9rem;color:var(--ink-soft);}
+.trouble p + p{margin-top:8px;}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:900px;}
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow);
+}
+.faq summary{
+  cursor:pointer;padding:16px 20px;font-weight:600;color:var(--sky-deep);
+  list-style:none;position:relative;font-size:.97rem;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  color:var(--wave);font-size:1.2rem;font-weight:400;
+}
+.faq details[open] summary::after{content:"–";}
+.faq details p{padding:0 20px 18px;font-size:.93rem;color:var(--ink-soft);}
+
+/* ---------- 侧栏与推荐 ---------- */
+.split{display:grid;grid-template-columns:1fr 320px;gap:34px;align-items:start;}
+.aside-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);margin-bottom:20px;
+}
+.aside-card h3{font-size:1rem;color:var(--sky-deep);margin-bottom:12px;}
+.aside-card ul{list-style:none;font-size:.92rem;}
+.aside-card ul li{padding:9px 0;border-bottom:1px dashed var(--line);color:var(--ink-soft);}
+.aside-card ul li:last-child{border-bottom:none;}
+.aside-card ul li b{color:var(--sky-mid);font-weight:600;}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+  background:var(--sky-deep);color:#c9e3f3;padding:44px 0 26px;font-size:.9rem;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:26px;}
+.foot-grid h4{color:#fff;font-size:.98rem;margin-bottom:12px;}
+.foot-grid ul{list-style:none;}
+.foot-grid ul li{margin-bottom:8px;}
+.foot-grid a{color:#c9e3f3;}
+.foot-grid a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.16);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  color:#9dc4dd;font-size:.84rem;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;gap:28px;}
+  .principle{grid-template-columns:1fr;gap:22px;}
+  .split{grid-template-columns:1fr;}
+  .diagram-grid{grid-template-columns:repeat(2,1fr);}
+  .trouble{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15px;}
+  section{padding:40px 0;}
+  .steps{grid-template-columns:1fr;}
+  .diagram-grid{grid-template-columns:1fr 1fr;}
+  .trouble{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .topbar{padding:14px 0;}
+  header.site-head{padding-bottom:38px;}
+  th,td{padding:10px 12px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="mark">✈</span>
+        <span>纸飞机滑翔工坊</span>
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#steps">折法步骤</a></li>
+          <li><a href="#diagram">图解示意</a></li>
+          <li><a href="#params">纸张与参数</a></li>
+          <li><a href="#principle">滑翔原理</a></li>
+          <li><a href="#trouble">飞行调校</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>冲浪纸飞机折法图解：<em>一步步折出能长时间滑翔的纸飞机</em></h1>
+        <p class="lead">
+          冲浪纸飞机是滑翔类纸飞机中比较有代表性的一种折法，特点是机翼面积大、机身轻、出手后能借气流缓慢滑行。下面用分步图解的方式，把折法、纸张选择、机翼与升降舵的调整方法讲清楚，并说明飞不好时应该从哪里改。
+        </p>
+        <div class="hero-tags">
+          <span>分步图解</span>
+          <span>滑翔机型</span>
+          <span>纸张选择</span>
+          <span>升降舵调校</span>
+          <span>新手友好</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>折之前先记住三件事</h2>
+        <ol>
+          <li>用轻一点的纸，普通 70g 打印纸即可，越重越难滑翔。</li>
+          <li>所有折痕都要压实，压得越平，机翼越不容易歪。</li>
+          <li>左右对称是滑翔的前提，折完先目视检查再试飞。</li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 折法步骤 -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">STEP BY STEP</span>
+        <h2>冲浪纸飞机折法分步图解</h2>
+        <p>
+          下面的步骤以一张 A4 纸为基准。整个过程不需要剪刀和胶水，全部靠折叠完成。每一步折完后建议把纸举到眼前看一眼左右是否对称，再进入下一步。
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="num">1</span>
+          <h3>纵向对折，确定中轴</h3>
+          <p>把 A4 纸竖向摆放，沿长边对折后展开，留下一条清晰的中线折痕。这条线是后面所有对称折叠的基准，建议用指甲或直尺把折痕压实。</p>
+          <p class="tip">提示：如果纸张有卷曲，先反向轻卷一下再摊平，避免折出来左右厚度不一致。</p>
+        </article>
+
+        <article class="step">
+          <span class="num">2</span>
+          <h3>顶部两角折向中线</h3>
+          <p>把纸张上方的两个角分别向中线折，边与中线对齐，形成一个三角形的机头。折的时候注意两个角折下来的高度要一致。</p>
+          <p>折完后纸张上半部分会呈现一个尖角朝上的等腰三角形，这是机头的基础结构。</p>
+        </article>
+
+        <article class="step">
+          <span class="num">3</span>
+          <h3>再次向中线收拢，加长机头</h3>
+          <p>把上一步形成的斜边再次向中线折拢，让机头变得更尖更长。这一步决定了机身的前后配重，机头过长会俯冲，过短则容易抬头失速。</p>
+          <p class="tip">提示：两次收拢后的机头长度大约占整张纸的三分之一较为合适。</p>
+        </article>
+
+        <article class="step">
+          <span class="num">4</span>
+          <h3>沿中线对折机身</h3>
+          <p>把整张纸沿最初的中线对折，让刚才折好的机头结构藏在里面。此时从侧面看应该是一条细长的机身，机头略尖。</p>
+          <p>对折后用手掌从机头向机尾方向压一遍，把里面的空气挤出来，机身会更服帖。</p>
+        </article>
+
+        <article class="step">
+          <span class="num">5</span>
+          <h3>折出两侧机翼</h3>
+          <p>把机身平放，将上层的纸向下翻折，折线从机头下方约一到两指宽的位置开始，一直延伸到机尾。翻面后同样操作另一侧。</p>
+          <p>冲浪纸飞机与普通纸飞机最大的区别就在这里：机翼要折得宽，机翼宽度大约占机身高度的一半以上，才能提供足够的滑翔面积。</p>
+        </article>
+
+        <article class="step">
+          <span class="num">6</span>
+          <h3>调整机翼上反角与升降舵</h3>
+          <p>把两侧机翼微微向上翘起，形成浅浅的 V 形，也就是上反角。然后在机翼后缘各捏出一小块向上翘起的小翼面，作为升降舵。</p>
+          <p>升降舵向上翘得越多，机头越容易抬起；反之则越容易低头。先从小幅度开始，试飞后再微调。</p>
+          <p class="tip">提示：两侧升降舵的大小和角度必须一致，否则飞机会在空中打转。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图解示意 -->
+  <section id="diagram">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">VISUAL GUIDE</span>
+        <h2>关键形态图解示意</h2>
+        <p>下面用简化的线稿标出四个关键阶段的形态，方便对照自己手里的纸张。示意图只表达结构关系，比例以实际折出的效果为准。</p>
+      </div>
+
+      <div class="diagram-grid">
+        <div class="diagram">
+          <svg viewBox="0 0 120 110" role="img" aria-label="纵向对折示意">
+            <rect x="35" y="10" width="50" height="90" fill="#e8f4fb" stroke="#1b6ea8" stroke-width="2"/>
+            <line x1="60" y1="10" x2="60" y2="100" stroke="#ff8a3d" stroke-width="2" stroke-dasharray="5 4"/>
+          </svg>
+          <strong>第 1 步</strong>
+          <span>纵向对折留中线</span>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 120 110" role="img" aria-label="顶部折角示意">
+            <rect x="35" y="10" width="50" height="90" fill="#e8f4fb" stroke="#1b6ea8" stroke-width="2"/>
+            <polygon points="35,10 60,45 60,10" fill="#bfe0f4" stroke="#1b6ea8" stroke-width="1.6"/>
+            <polygon points="85,10 60,45 60,10" fill="#bfe0f4" stroke="#1b6ea8" stroke-width="1.6"/>
+          </svg>
+          <strong>第 2 步</strong>
+          <span>两角折向中线</span>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 120 110" role="img" aria-label="机身对折示意">
+            <polygon points="60,8 78,95 42,95" fill="#e8f4fb" stroke="#1b6ea8" stroke-width="2"/>
+            <line x1="60" y1="8" x2="60" y2="95" stroke="#ff8a3d" stroke-width="1.6" stroke-dasharray="5 4"/>
+          </svg>
+          <strong>第 4 步</strong>
+          <span>沿中线对折机身</span>
+        </div>
+
+        <div class="diagram">
+          <svg viewBox="0 0 120 110" role="img" aria-label="机翼与上反角示意">
+            <polygon points="60,12 108,72 60,88" fill="#bfe0f4" stroke="#1b6ea8" stroke-width="1.8"/>
+            <polygon points="60,12 12,72 60,88" fill="#dcefFA" stroke="#1b6ea8" stroke-width="1.8"/>
+            <line x1="60" y1="12" x2="60" y2="88" stroke="#1b6ea8" stroke-width="1.6"/>
+            <line x1="108" y1="72" x2="112" y2="64" stroke="#ff8a3d" stroke-width="2"/>
+            <line x1="12" y1="72" x2="8" y2="64" stroke="#ff8a3d" stroke-width="2"/>
+          </svg>
+          <strong>第 5–6 步</strong>
+          <span>机翼宽度与上反角</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 纸张与参数 -->
+  <section id="params">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">MATERIALS</span>
+        <h2>纸张选择与关键尺寸参考</h2>
+        <p>同一套折法，换一种纸，飞行表现可能完全不同。下表列出常见纸张的适用情况和调整方向，供实际动手时参考。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>常见纸张与冲浪纸飞机适配情况</caption>
+          <thead>
+            <tr>
+              <th>纸张类型</th>
+              <th>克重参考</th>
+              <th>滑翔表现</th>
+              <th>调整建议</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>普通打印纸（A4）</td>
+              <td>约 70g</td>
+              <td>较轻，滑翔速度慢，适合室内</td>
+              <td>保持标准折法，升降舵小幅上翘</td>
+            </tr>
+            <tr>
+              <td>稍厚打印纸</td>
+              <td>约 80–90g</td>
+              <td>机身更挺，抗风性略好</td>
+              <td>机翼可略收窄，避免整体过重</td>
+            </tr>
+            <tr>
+              <td>彩色手工纸</td>
+              <td>约 60–80g</td>
+              <td>手感轻，但折痕不易压平</td>
+              <td>折痕处多压几遍，机翼避免过宽</td>
+            </tr>
+            <tr>
+              <td>旧报纸、宣传单</td>
+              <td>偏薄且不均匀</td>
+              <td>稳定性一般，适合练习折法</td>
+              <td>优先用于熟悉步骤，再换正式纸张</td>
+            </tr>
+            <tr>
+              <td>卡纸、硬纸板</td>
+              <td>明显偏重</td>
+              <td>不易滑翔，多为投掷直线飞行</td>
+              <td>不建议用于冲浪纸飞机折法</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 滑翔原理 -->
+  <section id="principle">
+    <div class="wrap">
+      <div class="principle">
+        <div>
+          <h3>为什么冲浪纸飞机能滑翔</h3>
+          <p>
+            纸飞机本身没有动力，出手之后靠的是初速度、重力和空气作用力的平衡。冲浪纸飞机的机翼面积较大，单位面积承重小，因此下落速度慢，看起来就像在空中“冲浪”。
+          </p>
+          <ul>
+            <li>机翼面积大，能获得更多升力，下落时更平缓。</li>
+            <li>机身轻，同样的升力下更容易保持姿态。</li>
+            <li>上反角让飞机在倾斜时产生回正趋势，飞行更稳。</li>
+            <li>升降舵控制机头俯仰，决定是抬头滑行还是快速下坠。</li>
+          </ul>
+        </div>
+        <div class="force-box">
+          <dl>
+            <dt>升力</dt>
+            <dd>由机翼与气流的相对运动产生，机翼越宽、速度越合适，升力越明显。</dd>
+            <dt>重力</dt>
+            <dd>把飞机往下拉的力量，纸张越重，下坠越快。</dd>
+            <dt>阻力</dt>
+            <dd>空气对机身的阻碍，机头越尖、折痕越平整，阻力越小。</dd>
+            <dt>俯仰平衡</dt>
+            <dd>由机头重量和升降舵共同决定，是滑翔能否稳定的关键。</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 飞行调校与问题排查 -->
+  <section id="trouble">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">TROUBLESHOOTING</span>
+        <h2>飞不好时从哪里改</h2>
+        <p>纸飞机试飞几乎不会一次就完美。先判断飞行状态属于哪一类，再对应调整，比反复重折更有效率。</p>
+      </div>
+
+      <div class="trouble">
+        <article>
+          <h3>一出手就栽头</h3>
+          <p>通常是机头过重或升降舵上翘不足。可以先把两侧升降舵再往上捏一点，每次只改很小的幅度。</p>
+          <p>如果仍然栽头，检查机头是否折得太长太厚，必要时把机头内部的多余折层稍微展开一点。</p>
+        </article>
+
+        <article>
+          <h3>飞出去就往上翻</h3>
+          <p>说明机头太轻、升降舵上翘过多。把升降舵向下压平一些，或者把机头折层压得更紧实，增加前部重量。</p>
+          <p>出手角度过高也会造成抬头失速，尝试用接近水平的角度轻推出去。</p>
+        </article>
+
+        <article>
+          <h3>飞行中向左或向右偏</h3>
+          <p>基本可以判断为左右不对称。把飞机举到眼前，从机尾向机头看，对比两侧机翼的高度和角度是否一致。</p>
+          <p>重点检查上反角、升降舵大小和机翼折线位置，把偏差较大的一侧调整到与另一侧相同。</p>
+        </article>
+
+        <article>
+          <h3>滑翔距离很短</h3>
+          <p>可能是纸张过重、机翼过窄或出手速度不够。先换一张更轻的纸，再把机翼适当加宽。</p>
+          <p>出手时保持机身水平，用手腕带动轻推，而不是用力甩出去。</p>
+        </article>
+
+        <article>
+          <h3>飞行时不断打转</h3>
+          <p>多数是某一侧机翼被压变形，或者两侧升降舵差异明显。把机翼摊平重新整形，再对称调整升降舵。</p>
+          <p>如果折痕本身已经歪斜，建议重新折一架，比强行修正更省时间。</p>
+        </article>
+
+        <article>
+          <h3>室内飞得好，室外就乱</h3>
+          <p>室外气流不稳定，轻的滑翔机型容易受风影响。可以选择无风或微风的时段，在开阔、无遮挡的场地试飞。</p>
+          <p>风力明显时，冲浪纸飞机并不是合适的选择，可以改玩机身更重、速度更快的直线机型。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文 + 侧栏 -->
+  <section id="guide">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head">
+          <span class="kicker">PRACTICE</span>
+          <h2>练习冲浪纸飞机折法的几个建议</h2>
+          <p>折法本身并不复杂，难的是把每一道折痕都折到位。下面几点来自实际动手时的经验总结，可以帮助减少返工。</p>
+        </div>
+
+        <article class="step" style="margin-bottom:18px;">
+          <h3>先求对称，再求好看</h3>
+          <p>很多人一开始会追求机头折得多尖、机翼折得多漂亮，结果忽略了左右对称。实际上，只要两侧结构一致，即使外形朴素，也能飞得平稳。</p>
+          <p>折的过程中可以随时把纸对折起来比对，看两边的边线是否重合，这是最直接的检查方式。</p>
+        </article>
+
+        <article class="step" style="margin-bottom:18px;">
+          <h3>折痕要压实，但不要反复揉</h3>
+          <p>折痕压实可以让机身更挺，减少飞行中的形变。但同一位置反复折叠、揉搓，会让纸张纤维疲劳，机翼变软下垂，反而影响滑翔。</p>
+          <p>建议每道折痕压一到两次即可，发现压歪了尽早展开重折。</p>
+        </article>
+
+        <article class="step" style="margin-bottom:18px;">
+          <h3>每次只调一个变量</h3>
+          <p>试飞时如果同时改机翼角度、升降舵和出手方式，就很难判断是哪一项起了作用。更稳妥的做法是每次只调整一处，飞两三次观察变化。</p>
+          <p>记录下调整前后的表现，几次之后就能摸清自己这架飞机的“脾气”。</p>
+        </article>
+
+        <article class="step">
+          <h3>多折几架做对比</h3>
+          <p>用同一包纸折出两三架，分别尝试不同的机翼宽度或升降舵角度，放在一起试飞对比，比单独调整一架更容易看出差别。</p>
+          <p>这也是熟悉冲浪纸飞机折法、理解各部位作用的高效方式。</p>
+        </article>
+      </div>
+
+      <aside>
+        <div class="aside-card">
+          <h3>折法要点速查</h3>
+          <ul>
+            <li><b>纸张：</b>70g 左右打印纸最省心</li>
+            <li><b>机头：</b>约占整纸三分之一</li>
+            <li><b>机翼：</b>宽度不低于机身高度一半</li>
+            <li><b>上反角：</b>轻微上翘即可</li>
+            <li><b>升降舵：</b>两侧对称，小幅度调整</li>
+            <li><b>出手：</b>接近水平，轻推不甩</li>
+          </ul>
+        </div>
+
+        <div class="aside-card">
+          <h3>适合试飞的环境</h3>
+          <ul>
+            <li>室内大厅、走廊等无风空间</li>
+            <li>室外选择微风或无风时段</li>
+            <li>场地开阔，避开人群和易碎物</li>
+            <li>地面平整，方便捡回飞机</li>
+          </ul>
+        </div>
+
+        <div class="aside-card">
+          <h3>安全提醒</h3>
+          <ul>
+            <li>不要朝人或动物方向投掷</li>
+            <li>避免在楼梯、阳台边缘试飞</li>
+            <li>远离道路、水域和电气设备</li>
+            <li>纸张边角锋利时注意手指</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>冲浪纸飞机折法常见问题</h2>
+        <p>下面整理了初学冲浪纸飞机时问得比较多的几个问题，答案以通用折法经验为基础，实际情况会因纸张和手法有所不同。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>冲浪纸飞机和普通纸飞机有什么区别？</summary>
+          <p>主要区别在机翼。冲浪纸飞机的机翼更宽、机身更轻，追求的是缓慢滑翔而不是快速直线飞行。普通纸飞机通常机翼较窄、机身更紧凑，更适合用力投掷。</p>
+        </details>
+
+        <details>
+          <summary>一定要用 A4 纸吗？</summary>
+          <p>不一定。A4 纸是最容易获得的规格，折法步骤也以此为准。其他尺寸的纸同样可以折，但各部位的比例需要按纸张大小相应调整，机头长度和机翼宽度都要重新把握。</p>
+        </details>
+
+        <details>
+          <summary>为什么我折的飞机总是往一边偏？</summary>
+          <p>最常见的原因是左右不对称。可以重点检查三处：机翼折线高度是否一致、上反角是否相同、两侧升降舵大小是否相等。把飞机从机尾方向正对着看，很容易发现问题。</p>
+        </details>
+
+        <details>
+          <summary>升降舵要翘多高才合适？</summary>
+          <p>没有固定数值，通常从很小的角度开始，比如后缘上翘一两毫米，试飞后再微调。翘得越多机头越容易抬起，翘得太多就会抬头失速甚至向后翻。</p>
+        </details>
+
+        <details>
+          <summary>折好的飞机放久了飞不好怎么办？</summary>
+          <p>纸张会吸潮变软，折痕也会逐渐回弹。可以把飞机重新压一遍折痕，尤其是机翼和机身中轴。如果纸张已经明显变形，重新折一架通常比修补更有效。</p>
+        </details>
+
+        <details>
+          <summary>可以用订书机或胶带加固吗？</summary>
+          <p>可以，但要注意重量分布。少量胶带用于固定机头折层是常见做法，但加得太多会让机头过重，破坏滑翔平衡。加之前最好先试飞一次作为对比。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>纸飞机滑翔工坊</h4>
+        <p>专注整理各类纸飞机的折法图解与飞行调校方法，内容以动手实践为基础，帮助读者折得出、飞得稳。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#steps">折法步骤</a></li>
+          <li><a href="#diagram">图解示意</a></li>
+          <li><a href="#params">纸张与参数</a></li>
+          <li><a href="#principle">滑翔原理</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>实用参考</h4>
+        <ul>
+          <li><a href="#trouble">飞行调校</a></li>
+          <li><a href="#guide">练习建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>冲浪纸飞机折法图解 · 滑翔纸飞机动手教程</span>
+      <span>试飞请注意安全，远离人群与危险区域</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+              </html>
